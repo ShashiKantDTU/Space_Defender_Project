@@ -2,6 +2,15 @@
 
 First python project
 
+
+# CONTROLS
+
+Arrow_right = Move right
+Arrow_Left  = Move left
+Spacebar    = Fire bullet
+
+# Game description
+
 Game Elements: The game consists of a player character, enemies (both normal and strong), bullets, power-ups, and health items.
 
 Player Control: The player can move left and right using the arrow keys and shoot bullets using the spacebar.
