@@ -6,26 +6,26 @@ pygame.init()
 screen = pygame.display.set_mode((800,600))
 
         #Load images
-icon = pygame.image.load("icon.png").convert_alpha()
-bg = pygame.image.load("bg2.png").convert_alpha()
-playerimage = pygame.image.load("player.png").convert_alpha()
-enemyimage = pygame.image.load("enemy.png").convert_alpha()
-strongenemyimage = pygame.image.load("strongenemy.png").convert_alpha()
-explosionimage = pygame.image.load("explosion.png").convert_alpha()
-menuimage = pygame.image.load("menu.png").convert_alpha()
-promptimage = pygame.image.load("promt.png").convert_alpha()
-endimage = pygame.image.load("end.png").convert_alpha()
-endscrbt = pygame.image.load("endscrbt.png").convert_alpha()
-healthimage = pygame.image.load("health.png").convert_alpha()
-powerupimage = pygame.image.load("powerup.png").convert_alpha()
+icon = pygame.image.load("Assets/Images/icon.png").convert_alpha()
+bg = pygame.image.load("Assets/Images/bg2.png").convert_alpha()
+playerimage = pygame.image.load("Assets/Images/player.png").convert_alpha()
+enemyimage = pygame.image.load("Assets/Images/enemy.png").convert_alpha()
+strongenemyimage = pygame.image.load("Assets/Images/strongenemy.png").convert_alpha()
+explosionimage = pygame.image.load("Assets/Images/explosion.png").convert_alpha()
+menuimage = pygame.image.load("Assets/Images/menu.png").convert_alpha()
+promptimage = pygame.image.load("Assets/Images/promt.png").convert_alpha()
+endimage = pygame.image.load("Assets/Images/end.png").convert_alpha()
+endscrbt = pygame.image.load("Assets/Images/endscrbt.png").convert_alpha()
+healthimage = pygame.image.load("Assets/Images/health.png").convert_alpha()
+powerupimage = pygame.image.load("Assets/Images/powerup.png").convert_alpha()
 
 # Load sound
-explosionsound = mixer.Sound("explosion.wav")
-bulletsound =mixer.Sound("bullet1.wav")
-collisionsound =mixer.Sound("explosion.wav")
-healthup = mixer.Sound("healthup.wav")
-healthdown = mixer.Sound("healthdown.wav")
-gameover = mixer.Sound("gameover.wav")
+explosionsound = mixer.Sound("Assets/Sound_Tracks/explosion.wav")
+bulletsound = mixer.Sound("Assets/Sound_Tracks/bullet1.wav")
+collisionsound = mixer.Sound("Assets/Sound_Tracks/explosion.wav")
+healthup = mixer.Sound("Assets/Sound_Tracks/healthup.wav")
+healthdown = mixer.Sound("Assets/Sound_Tracks/healthdown.wav")
+gameover = mixer.Sound("Assets/Sound_Tracks/gameover.wav")
 
         # create player :
 playerx = 340
@@ -178,7 +178,7 @@ for i in range(numberofbullets) :
     bulletstate.append("ready")
     bulletstatep1.append("ready")
     bulletstatep2.append("ready")
-    bulletimage.append(pygame.image.load("bullet.png").convert_alpha())
+    bulletimage.append(pygame.image.load("Assets/Images/bullet.png").convert_alpha())
  
         # collison for every type of enemy with bullet
 # collision for bullet and normal enemy
@@ -276,7 +276,7 @@ while running :
         screen.blit(menuimage,(0,0))
         screen.blit(promptimage,(0,0))
         if menumusic == False :
-            bgmmenusong = mixer.music.load("bgmmenu.wav")
+            bgmmenusong = mixer.music.load("Assets/Sound_Tracks/bgmmenu.wav")
             mixer.music.play(-1)
             menumusic = True
        
@@ -289,19 +289,15 @@ while running :
                 if event.key == pygame.K_SPACE :
                     menu = False
                     mixer.music.pause() 
-                # if event.key == pygame.K_m:
-                #     bgmmenus = mixer.music.load("bgmmenu.wav")
-                #     mixer.music.play(-1)
+               
 
         pygame.display.update()
 
-    # bgm = mixer.music.load("bgm.wav")
-    # mixer.music.play(-1)
 
     screen.fill((0,0,0))
     screen.blit(bg,(0,0))
     if bgmmusic == False :
-        bgm = mixer.music.load("bgm.wav")
+        bgm = mixer.music.load("Assets/Sound_Tracks/bgm.wav")
         mixer.music.play(-1)
         bgmmusic = True
     # i = 0         # bullet number
@@ -524,7 +520,7 @@ while running :
         screen.blit(endscrbt,(0,0))
         screen.blit(currscore,(200,100))
         if menumusic == False :
-            bgmmenusong = mixer.music.load("bgmmenu.wav")
+            bgmmenusong = mixer.music.load("Assets/Sound_Tracks/bgmmenu.wav")
             mixer.music.play(-1)
             menumusic == True
         for event in pygame.event.get() :
