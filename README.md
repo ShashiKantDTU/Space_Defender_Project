@@ -34,7 +34,7 @@ Menu: The game starts with a menu screen where the player can start the game or 
 
 (1).Added Power up :- Fire three bullets at a time in three different directions 
 
-(2).Added Feature for FPS cape so game will run 60 FPS in every devices so no change will be in game speed across different devices
+(2).Added Feature for FPS cape so game will try to run at 60 FPS only in every devices so no change will be in game speed across different devices
 
 MANY UPDATES WILL BE SOON ADDED.......
 
